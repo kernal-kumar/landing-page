@@ -1,0 +1,210 @@
+/* Base styles */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f6f8ff;
+  margin: 0;
+  color: #222;
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(90deg, #7b2ff2 0%, #f357a8 100%);
+  color: #fff;
+  border-radius: 16px 16px 0 0;
+  padding: 2rem 0 1.5rem 0;
+  text-align: left;
+  box-shadow: 0 4px 24px rgba(123,47,242,0.08);
+}
+.header__container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.header__icon {
+  font-size: 1.5rem;
+}
+.header__brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+.header__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.25rem 0;
+}
+.header__subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.registration__form {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(123,47,242,0.06);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form__label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+}
+.form__required {
+  color: #f357a8;
+  font-size: 1.1em;
+}
+.form__input {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7f7fa;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form__input:focus {
+  border-color: #7b2ff2;
+  outline: none;
+  box-shadow: 0 0 0 2px #e5d6fa;
+}
+.form__input:disabled {
+  background: #ececec;
+  color: #aaa;
+}
+.form__button {
+  background: linear-gradient(90deg, #7b2ff2 0%, #f357a8 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(123,47,242,0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+.form__button:hover, .form__button:focus {
+  background: linear-gradient(90deg, #f357a8 0%, #7b2ff2 100%);
+  transform: translateY(-2px) scale(1.02);
+}
+.form__note {
+  background: #f6f8ff;
+  color: #444;
+  border-left: 4px solid #7b2ff2;
+  border-radius: 6px;
+  padding: 1rem 1rem 1rem 2.5rem;
+  font-size: 0.98rem;
+  margin-top: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.form__note .fa-circle-info {
+  color: #7b2ff2;
+  position: absolute;
+  left: 1rem;
+  top: 1.1rem;
+  font-size: 1.2rem;
+}
+
+.idea {
+  margin-top: 3rem;
+  background: #f7f7fa;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(123,47,242,0.04);
+}
+.idea__container {
+  text-align: center;
+}
+.idea__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.idea__icon {
+  color: #7b2ff2;
+  font-size: 1.3rem;
+}
+.idea__brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.idea__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.25rem 0;
+  color: #7b2ff2;
+}
+.idea__subtitle {
+  font-size: 1.05rem;
+  color: #555;
+  margin: 0;
+}
+
+.footer {
+  margin-top: 3rem;
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 -2px 12px rgba(123,47,242,0.04);
+  padding: 1.25rem 0;
+}
+.footer__container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer__text {
+  color: #888;
+  font-size: 0.98rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header__container, .main, .footer__container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .registration__form, .idea {
+    padding: 1.25rem 0.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .header__title {
+    font-size: 1.3rem;
+  }
+  .main {
+    padding: 1rem 0.5rem 0 0.5rem;
+  }
+  .registration__form, .idea {
+    padding: 1rem 0.25rem;
+  }
+  .idea__title {
+    font-size: 1.1rem;
+  }
+}

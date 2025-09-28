@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration | IKSHANA</title>
+  <link rel="stylesheet" href="register.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <i class="fa-solid fa-lightbulb header__icon"></i>
+        <span class="header__brand">IKSHANA</span>
+      </div>
+      <h1 class="header__title">Event Registration</h1>
+      <p class="header__subtitle">Please fill in all required fields to complete your registration</p>
+    </div>
+  </header>
+  <main class="main">
+    <section class="registration">
+      <form class="registration__form" id="registrationForm" novalidate>
+        <div class="form__group">
+          <label for="fullName" class="form__label">Full Name <span class="form__required">*</span></label>
+          <input type="text" id="fullName" name="fullName" class="form__input" placeholder="Enter your full name" required>
+        </div>
+        <div class="form__group">
+          <label for="email" class="form__label">Email Address <span class="form__required">*</span></label>
+          <input type="email" id="email" name="email" class="form__input" placeholder="Enter your email address" required>
+        </div>
+        <div class="form__group">
+          <label for="phone" class="form__label">Phone Number <span class="form__required">*</span></label>
+          <input type="tel" id="phone" name="phone" class="form__input" placeholder="Enter your phone number" required pattern="[0-9]{10,15}">
+        </div>
+        <div class="form__group">
+          <label for="college" class="form__label">College/Institution <span class="form__required">*</span></label>
+          <input type="text" id="college" name="college" class="form__input" placeholder="Enter your college or institution name" required>
+        </div>
+        <div class="form__group">
+          <label for="department" class="form__label">Department <span class="form__required">*</span></label>
+          <input type="text" id="department" name="department" class="form__input" placeholder="Enter your department (e.g., Computer Science, Electrical Engineering)" required>
+        </div>
+        <div class="form__group">
+          <label for="year" class="form__label">Year of Study <span class="form__required">*</span></label>
+          <select id="year" name="year" class="form__input" required>
+            <option value="" disabled selected>Select your year of study</option>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label for="category" class="form__label">Event Category <span class="form__required">*</span></label>
+          <select id="category" name="category" class="form__input" required>
+            <option value="" disabled selected>Select the event category you're interested in</option>
+            <option value="tech">Technical</option>
+            <option value="nontech">Non-Technical</option>
+            <option value="workshop">Workshop</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button type="submit" class="form__button">Complete Registration</button>
+        <div class="form__note">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>All fields marked with <span class="form__required">*</span> are required. Please ensure all information is accurate as it will be used for event communications.</span>
+        </div>
+      </form>
+    </section>
+    <section class="idea">
+      <div class="idea__container">
+        <div class="idea__header">
+          <i class="fa-solid fa-lightbulb idea__icon"></i>
+          <span class="idea__brand">IKSHANA</span>
+        </div>
+        <h2 class="idea__title">Submit Your Idea</h2>
+        <p class="idea__subtitle">Share your innovative ideas with the IKSHANA community. Fill out the form below to submit your proposal and be part of something extraordinary.</p>
+        <!-- Add your idea submission form here if needed -->
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__text">&copy; 2025 IKSHANA. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="register.js"></script>
+</body>
+</html>
