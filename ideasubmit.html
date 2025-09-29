@@ -11,16 +11,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="ikshana-header">
-    <div class="ikshana-header__logo">
-      <button class="ikshana-header__brand"><i class="fa-solid fa-lightbulb"></i> IKSHANA</button>
+
+<header class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <i class="fa-solid fa-lightbulb header__icon"></i>
+        <span class="header__brand">IKSHANA</span>
+      </div>
+      <h1 class="header__title">Submit Your Idea</h1>
+      <p class="header__subtitle">Share your innovative ideas with the IKSHANA community. Fill out the form below to submit your proposal and be part of something extraordinary.</p>
     </div>
-    <h1 class="ikshana-header__title">Submit Your Idea</h1>
-    <p class="ikshana-header__desc">Share your innovative ideas with the IKSHANA community. Fill out the form below to submit your proposal and be part of something extraordinary.</p>
   </header>
 
+
+
+  
   <main class="ikshana-main">
-    <form class="ikshana-form" id="ikshanaForm" action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
+    <form class="ikshana-form" id="ikshanaForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+      <!-- Web3Forms API key -->
+      <input type="hidden" name="access_key" value="0fc2ff10-9fae-4f1b-b52b-8e31cb4d2897">
+      
+
       <!-- Applicant Information -->
       <section class="ikshana-section ikshana-section--applicant">
         <div class="ikshana-section__header">
@@ -82,7 +93,7 @@
         </div>
       </section>
 
-      <!-- Required Submission -->
+      <!-- Submission -->
       <section class="ikshana-section ikshana-section--submission">
         <!-- Video Pitch -->
         <div class="ikshana-upload ikshana-upload--video">
@@ -133,6 +144,7 @@
       </div>
     </div>
   </footer>
+
   <script src="ideasubmit.js"></script>
 </body>
 </html>

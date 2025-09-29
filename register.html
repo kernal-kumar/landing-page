@@ -23,54 +23,74 @@
   </header>
   <main class="main">
     <section class="registration">
-      <form class="registration__form" id="registrationForm" novalidate>
-        <div class="form__group">
-          <label for="fullName" class="form__label">Full Name <span class="form__required">*</span></label>
-          <input type="text" id="fullName" name="fullName" class="form__input" placeholder="Enter your full name" required>
-        </div>
-        <div class="form__group">
-          <label for="email" class="form__label">Email Address <span class="form__required">*</span></label>
-          <input type="email" id="email" name="email" class="form__input" placeholder="Enter your email address" required>
-        </div>
-        <div class="form__group">
-          <label for="phone" class="form__label">Phone Number <span class="form__required">*</span></label>
-          <input type="tel" id="phone" name="phone" class="form__input" placeholder="Enter your phone number" required pattern="[0-9]{10,15}">
-        </div>
-        <div class="form__group">
-          <label for="college" class="form__label">College/Institution <span class="form__required">*</span></label>
-          <input type="text" id="college" name="college" class="form__input" placeholder="Enter your college or institution name" required>
-        </div>
-        <div class="form__group">
-          <label for="department" class="form__label">Department <span class="form__required">*</span></label>
-          <input type="text" id="department" name="department" class="form__input" placeholder="Enter your department (e.g., Computer Science, Electrical Engineering)" required>
-        </div>
-        <div class="form__group">
-          <label for="year" class="form__label">Year of Study <span class="form__required">*</span></label>
-          <select id="year" name="year" class="form__input" required>
-            <option value="" disabled selected>Select your year of study</option>
-            <option value="1">1st Year</option>
-            <option value="2">2nd Year</option>
-            <option value="3">3rd Year</option>
-            <option value="4">4th Year</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="form__group">
-          <label for="category" class="form__label">Event Category <span class="form__required">*</span></label>
-          <select id="category" name="category" class="form__input" required>
-            <option value="" disabled selected>Select the event category you're interested in</option>
-            <option value="tech">Technical</option>
-            <option value="nontech">Non-Technical</option>
-            <option value="workshop">Workshop</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <button type="submit" class="form__button">Complete Registration</button>
-        <div class="form__note">
+      <form class="registration__form" id="registrationForm" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="0fc2ff10-9fae-4f1b-b52b-8e31cb4d2897">
+
+  <div class="form__group">
+    <label for="fullName" class="form__label">Full Name <span class="form__required">*</span></label>
+    <input type="text" id="fullName" name="fullName" class="form__input" placeholder="Enter your full name" required>
+  </div>
+
+  <div class="form__group">
+    <label for="email" class="form__label">Email Address <span class="form__required">*</span></label>
+    <input type="email" id="email" name="email" class="form__input" placeholder="Enter your email address" required>
+  </div>
+
+  <div class="form__group">
+    <label for="phone" class="form__label">Phone Number <span class="form__required">*</span></label>
+    <input type="tel" id="phone" name="phone" class="form__input" placeholder="Enter your phone number" required pattern="[0-9]{10,15}">
+  </div>
+
+  <div class="form__group">
+    <label for="college" class="form__label">College/Institution <span class="form__required">*</span></label>
+    <input type="text" id="college" name="college" class="form__input" placeholder="Enter your college or institution name" required>
+  </div>
+
+  <div class="form__group">
+    <label for="department" class="form__label">Department <span class="form__required">*</span></label>
+    <input type="text" id="department" name="department" class="form__input" placeholder="Enter your department" required>
+  </div>
+
+  <div class="form__group">
+  <label for="idcard" class="form__label">College ID Card Number <span class="form__required">*</span></label>
+  <input type="text" id="idcard" name="idcard" class="form__input" placeholder="Enter your College ID Card Number" required>
+</div>
+
+  <div class="form__group">
+    <label for="year" class="form__label">Year of Study <span class="form__required">*</span></label>
+    <select id="year" name="year" class="form__input" required>
+      <option value="" disabled selected>Select your year of study</option>
+      <option value="1">1st Year</option>
+      <option value="2">2nd Year</option>
+      <option value="3">3rd Year</option>
+      <option value="4">4th Year</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+   
+
+  <div class="form__group">
+    <label for="category" class="form__label">Event Category <span class="form__required">*</span></label>
+    <select id="category" name="category" class="form__input" required>
+      <option value="" disabled selected>Select the event category you're interested in</option>
+      <option value="tech">Hackathon</option>
+      <option value="nontech">Seminar</option>
+       <option value="nontech">Technical Workshop</option>
+        <option value="nontech">Networking Session</option>
+      <option value="workshop">Panel Discussion</option>
+      <option value="other">Cultural Events</option>
+    </select>
+  </div>
+
+  <button type="submit" class="form__button">Complete Registration</button>
+<div class="form__note">
           <i class="fa-solid fa-circle-info"></i>
           <span>All fields marked with <span class="form__required">*</span> are required. Please ensure all information is accurate as it will be used for event communications.</span>
         </div>
-      </form>
+</form>
+
+        
+      
     </section>
     <section class="idea">
       <div class="idea__container">
